@@ -1,3 +1,16 @@
+## Установка зависимостей локально
+```
+1. cd lab1
+2. uv venv
+3. source venv/bin/activate
+4. uv pip install -r requirements.txt
+```
+
+## Локальный запуск
+```uvicorn app.main:app --reload```
+
+```http://127.0.0.1:8000/docs```
+
 ## Эндпоинты
 - `GET /health` — проверка сервиса
 - `GET /model_info` — информация о модели
@@ -7,13 +20,7 @@
 - `POST /predict_batch` — предсказание для списка текстов
   ```json
   { "texts": ["текст 1", "текст 2"] }
-    ```
-
-## Локальный запуск
-```uvicorn app.main:app --reload```
-
-```http://127.0.0.1:8000/docs```
-
+  ```
 
 ## Docker
 ```bash
