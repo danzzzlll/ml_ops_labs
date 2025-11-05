@@ -1,0 +1,17 @@
+# --- API ---
+fastapi
+uvicorn
+
+# --- NLP ---
+transformers
+torch
+sentencepiece
+
+# --- Validation / Schemas ---
+pydantic
+pydantic-settings
+
+# --- Testing ---
+pytest
+httpx
+requests
