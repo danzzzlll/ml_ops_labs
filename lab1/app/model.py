@@ -1,14 +1,21 @@
+import os
 from functools import lru_cache
 from typing import List
 
 from transformers import pipeline
+
+MODEL_DIR = os.getenv(
+    "MODEL_DIR",
+    "models/",
+)
 
 
 @lru_cache(maxsize=1)
 def get_pipeline():
     clf = pipeline(
         "text-classification",
-        model="cointegrated/rubert-tiny-toxicity",
+        model=MODEL_DIR,
+        tokenizer=MODEL_DIR,
         top_k=None,
     )
     return clf
